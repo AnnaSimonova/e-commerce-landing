@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:image" content="images/logos/DF_logo_black.svg">
+    <title>Wine & Spirits - Smart Duty Free</title>
+
+    <link rel="stylesheet" href="extensions/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/products_list_by_category.css">
+</head>
+<body>
+<div class="main-banner">
+    <div class="banner-bg">
+        <header>
+            <a href="index.html" class="main-logo"><img src="images/logos/DF_logo_black.svg" alt="Smart Duty Free logo"></a>
+            <nav>
+                <a href="#" class="shopping-bag">
+                    <img src="images/shopping-icon.svg">
+                    <sup><sup><sup class="quantity-index">1</sup></sup></sup>
+                </a>
+                <a href="#" class="my-favs">
+                    <img src="images/add_to_favs.svg">
+                    <sup><sup><sup class="quantity-index">1</sup></sup></sup>
+                </a>
+                <select class="lang-switcher">
+                    <option>EN</option>
+                    <option>UA</option>
+                    <option>RU</option>
+                </select>
+                <a href="#" class="login"><img src="images/login-icon.png"></a>
+            </nav>
+            <form action="#" class="search-form">
+                <div class="search">
+                    <input type="search" placeholder="Search by Product or Brand" class="search-field">
+                    <button type="submit"><img src="images/search-icon.svg"></button>
+                </div>
+            </form>
+        </header>
+        <div class="banner-content">
+            <div class="product-types large-screens-products">
+                <a href="products_list_by_category.html" class="wine-spirits">WINE & SPIRITS</a>
+                <a href="#" class="fragrances">FRAGRANCES</a>
+                <a href="#" class="makeup">MAKEUP</a>
+                <a href="#" class="sweets">SWEETS</a>
+                <a href="#" class="for-children">FOR CHILDREN</a>
+                <a href="#" class="accessories">ACCESSORIES</a>
+                <a href="#" class="skin-care">SKIN CARE</a>
+                <a href="#" class="electronics">ELECTRONICS</a>
+                <a href="#" class="clothes">CLOTHES</a>
+                <a href="#" class="cigarettes">CIGARETTES</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="product-types small-screens-products">
+    <a href="#" class="wine-spirits">WINE & SPIRITS</a>
+    <a href="#" class="fragrances">FRAGRANCES</a>
+    <a href="#" class="makeup">MAKEUP</a>
+    <a href="#" class="sweets">SWEETS</a>
+    <a href="#" class="for-children">FOR CHILDREN</a>
+    <a href="#" class="accessories">ACCESSORIES</a>
+    <a href="#" class="skin-care">SKIN CARE</a>
+    <a href="#" class="electronics">ELECTRONICS</a>
+    <a href="#" class="clothes">CLOTHES</a>
+    <a href="#" class="cigarettes">CIGARETTES</a>
+</div>
+<main>
+    <div aria-label="breadcrumb">
+        <ol class="breadcrumb bg-transparent">
+            <li class="breadcrumb-item"><a href="index.html" class="text-secondary">Home</a></li>
+            <li class="breadcrumb-item active text-body" aria-current="page">Wine & Spirits</li>
+        </ol>
+    </div>
+    <h2 class="page-title">Wine & Spirits</h2>
+    <div class="mx-3 mb-4">
+        <a id='filters-toggler' class="d-md-none filter-name-title" data-toggle="modal" href="#filters-modal">Filters</a>
+        <div class="modal left fade" id="filters-modal" tabindex="-1" role="dialog" aria-labelledby="filtersModal" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Filters</h4>
+                        <button type="button" class="close" data-dismiss="modal" style="outline: none;">&times;</button>
+                    </div>
+                    <form action="#" id="modal-filters" class="filters">
+                        <div class="modal-body" id="modal-body">
+                            <div id="modal-price-collapse">
+                                <a data-toggle="collapse" href="#modal-price-range" class="collapsed d-block filter-name"><span class="filter-title">PRICE</span><img src="images/arrow-up.svg" class="filter-arrow-sign"></a>
+                                <div class="filter-price collapse mb-3" id="modal-price-range">
+                                    <div class="price-wrap">
+                                        <div class="price-container">
+                                            <div class="price-wrap-1">
+                                                <span>$&nbsp;</span>
+                                                <span id="modal-one"></span>
+                                            </div>
+                                            <div class="price-wrap-2">
+                                                <span>$&nbsp;</span>
+                                                <span id="modal-two"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="price-field">
+                                        <input type="range" min="0" max="1000" value="1" id="modal-lower" step="5">
+                                        <input type="range" min="0" max="1000" value="1000" id="modal-upper" step="5">
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="modal-categories-collapse">
+                                <a data-toggle="collapse" href="#modal-categories-filter" class="collapsed d-block filter-name"><p class="filter-title">CATEGORIES (<span class="categories-quantity"></span>)</p><img src="images/arrow-up.svg" class="filter-arrow-sign"></a>
+                                <div class="collapse mb-3" id="modal-categories-filter">
+                                    <label class="search-input-label"><input class="searchInput" placeholder="Search"></label>
+                                    <div class="checkbox-list">
+                                        <label class="checkbox-container">Bourbon
+                                            <input type="checkbox" name="Bourbon" value="Bourbon">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="checkbox-container">Champagne
+                                            <input type="checkbox" name="Champagne" value="Champagne">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="checkbox-container">Cognac
+                                            <input type="checkbox" name="Cognac" value="Cognac">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="checkbox-container">Gin
+                                            <input type="checkbox" name="Gin" value="Gin">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="checkbox-container">Kosher wine
+                                            <input type="checkbox" name="Kosher wine" value="Kosher wine">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="checkbox-container">Liquor
+                                            <input type="checkbox" name="Liquor" value="Liquor">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="checkbox-container">Rum
+                                            <input type="checkbox" name="Rum" value="Rum">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="checkbox-container">Scotch
+                                            <input type="checkbox" name="Scotch" value="Scotch">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="checkbox-container">Tequila
+                                            <input type="checkbox" name="Tequila" value="Tequila">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="checkbox-container">Vermouth
+                                            <input type="checkbox" name="Vermouth" value="Vermouth">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="checkbox-container">Vodka
+                                            <input type="checkbox" name="Vodka" value="Vodka">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="checkbox-container">Whiskey
+                                            <input type="checkbox" name="Whiskey" value="Whiskey">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="checkbox-container">Wine
+                                            <input type="checkbox" name="Wine" value="Wine">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="modal-brands-collapse">
+                                <a data-toggle="collapse" href="#modal-brands-filter" class="collapsed d-block filter-name"><p class="filter-title">BRANDS (<span class="brands-quantity"></span>)</p><img src="images/arrow-up.svg" class="filter-arrow-sign"></a>
+                                <div class="collapse mb-3" id="modal-brands-filter">
+                                    <label class="search-input-label"><input class="searchInput" placeholder="Search"></label>
+                                    <div class="checkbox-list">
+                                        <label class="checkbox-container">1792 Bourbon
+                                            <input type="checkbox" name="1792 Bourbon" value="1792 Bourbon">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="checkbox-container">Absolut
+                                            <input type="checkbox" name="Absolut" value="Absolut">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="checkbox-container">Ardbeg
+                                            <input type="checkbox" name="Ardbeg" value="Ardbeg">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="checkbox-container">Bacardi
+                                            <input type="checkbox" name="Bacardi" value="Bacardi">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="checkbox-container">Baileys
+                                            <input type="checkbox" name="Baileys" value="Baileys">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="checkbox-container">Ballantine's
+                                            <input type="checkbox" name="Ballantine's" value="Ballantine's">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="checkbox-container">Basil Haydens
+                                            <input type="checkbox" name="Basil Haydens" value="Basil Haydens">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="checkbox-container">Beefeater
+                                            <input type="checkbox" name="Beefeater" value="Beefeater">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="checkbox-container">Belvedere
+                                            <input type="checkbox" name="Belvedere" value="Belvedere">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="checkbox-container">1792 Bourbon
+                                            <input type="checkbox" name="1792 Bourbon" value="1792 Bourbon">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="checkbox-container">Absolut
+                                            <input type="checkbox" name="Absolut" value="Absolut">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="checkbox-container">Ardbeg
+                                            <input type="checkbox" name="Ardbeg" value="Ardbeg">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="checkbox-container">Bacardi
+                                            <input type="checkbox" name="Bacardi" value="Bacardi">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="checkbox-container">Baileys
+                                            <input type="checkbox" name="Baileys" value="Baileys">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="checkbox-container">Ballantine's
+                                            <input type="checkbox" name="Ballantine's" value="Ballantine's">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="checkbox-container">Basil Haydens
+                                            <input type="checkbox" name="Basil Haydens" value="Basil Haydens">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="checkbox-container">Beefeater
+                                            <input type="checkbox" name="Beefeater" value="Beefeater">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                        <label class="checkbox-container">Belvedere
+                                            <input type="checkbox" name="Belvedere" value="Belvedere">
+                                            <span class="checkmark"></span>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn border-dark rounded-0 btn-light" data-dismiss="modal">Apply filters</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row main">
+        <div class="d-none d-md-block col-md-3 col-lg-2 pl-0">
+            <form action="#" id="filters" class="filters d-none d-md-block">
+                <p class="filter-name-title mb-4">Filters</p>
+                <div id="price-collapse">
+                    <a data-toggle="collapse" href="#price-range" class="collapsed d-block filter-name"><span class="filter-title">PRICE</span><img src="images/arrow-up.svg" class="filter-arrow-sign"></a>
+                    <div class="filter-price collapse mb-3" id="price-range">
+                        <div class="price-wrap">
+                            <div class="price-container">
+                                <div class="price-wrap-1">
+                                    <span>$&nbsp;</span>
+                                    <span id="one"></span>
+                                </div>
+                                <div class="price-wrap-2">
+                                    <span>$&nbsp;</span>
+                                    <span id="two"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="price-field">
+                            <input type="range" min="0" max="1000" value="1" id="lower" step="5">
+                            <input type="range" min="0" max="1000" value="1000" id="upper" step="5">
+                        </div>
+                    </div>
+                </div>
+                <div id="categories-collapse">
+                    <a data-toggle="collapse" href="#categories-filter" class="collapsed d-block filter-name"><p class="filter-title">CATEGORIES (<span class="categories-quantity"></span>)</p><img src="images/arrow-up.svg" class="filter-arrow-sign"></a>
+                    <div class="collapse mb-3" id="categories-filter">
+                        <label class="search-input-label"><input class="searchInput" placeholder="Search"></label>
+                        <div class="checkbox-list">
+                            <label class="checkbox-container">Bourbon
+                                <input type="checkbox" name="Bourbon" value="Bourbon">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="checkbox-container">Champagne
+                                <input type="checkbox" name="Champagne" value="Champagne">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="checkbox-container">Cognac
+                                <input type="checkbox" name="Cognac" value="Cognac">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="checkbox-container">Gin
+                                <input type="checkbox" name="Gin" value="Gin">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="checkbox-container">Kosher wine
+                                <input type="checkbox" name="Kosher wine" value="Kosher wine">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="checkbox-container">Liquor
+                                <input type="checkbox" name="Liquor" value="Liquor">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="checkbox-container">Rum
+                                <input type="checkbox" name="Rum" value="Rum">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="checkbox-container">Scotch
+                                <input type="checkbox" name="Scotch" value="Scotch">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="checkbox-container">Tequila
+                                <input type="checkbox" name="Tequila" value="Tequila">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="checkbox-container">Vermouth
+                                <input type="checkbox" name="Vermouth" value="Vermouth">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="checkbox-container">Vodka
+                                <input type="checkbox" name="Vodka" value="Vodka">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="checkbox-container">Whiskey
+                                <input type="checkbox" name="Whiskey" value="Whiskey">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="checkbox-container">Wine
+                                <input type="checkbox" name="Wine" value="Wine">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div id="brands-collapse">
+                    <a data-toggle="collapse" href="#brands-filter" class="collapsed d-block filter-name"><p class="filter-title">BRANDS (<span class="brands-quantity"></span>)</p><img src="images/arrow-up.svg" class="filter-arrow-sign"></a>
+                    <div class="collapse mb-3" id="brands-filter">
+                        <label class="search-input-label"><input class="searchInput" placeholder="Search"></label>
+                        <div class="checkbox-list">
+                            <label class="checkbox-container">1792 Bourbon
+                                <input type="checkbox" name="1792 Bourbon" value="1792 Bourbon">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="checkbox-container">Absolut
+                                <input type="checkbox" name="Absolut" value="Absolut">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="checkbox-container">Ardbeg
+                                <input type="checkbox" name="Ardbeg" value="Ardbeg">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="checkbox-container">Bacardi
+                                <input type="checkbox" name="Bacardi" value="Bacardi">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="checkbox-container">Baileys
+                                <input type="checkbox" name="Baileys" value="Baileys">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="checkbox-container">Ballantine's
+                                <input type="checkbox" name="Ballantine's" value="Ballantine's">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="checkbox-container">Basil Haydens
+                                <input type="checkbox" name="Basil Haydens" value="Basil Haydens">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="checkbox-container">Beefeater
+                                <input type="checkbox" name="Beefeater" value="Beefeater">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="checkbox-container">Belvedere
+                                <input type="checkbox" name="Belvedere" value="Belvedere">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="checkbox-container">1792 Bourbon
+                                <input type="checkbox" name="1792 Bourbon" value="1792 Bourbon">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="checkbox-container">Absolut
+                                <input type="checkbox" name="Absolut" value="Absolut">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="checkbox-container">Ardbeg
+                                <input type="checkbox" name="Ardbeg" value="Ardbeg">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="checkbox-container">Bacardi
+                                <input type="checkbox" name="Bacardi" value="Bacardi">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="checkbox-container">Baileys
+                                <input type="checkbox" name="Baileys" value="Baileys">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="checkbox-container">Ballantine's
+                                <input type="checkbox" name="Ballantine's" value="Ballantine's">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="checkbox-container">Basil Haydens
+                                <input type="checkbox" name="Basil Haydens" value="Basil Haydens">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="checkbox-container">Beefeater
+                                <input type="checkbox" name="Beefeater" value="Beefeater">
+                                <span class="checkmark"></span>
+                            </label>
+                            <label class="checkbox-container">Belvedere
+                                <input type="checkbox" name="Belvedere" value="Belvedere">
+                                <span class="checkmark"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <button type="submit" class="btn border-dark rounded-0 btn-light apply-filters-btn" data-dismiss="modal">Apply filters</button>
+            </form>
+        </div>
+        <div class="products-list row m-0 col-12 col-md-9 col-lg-10 p-0">
+            <div class="col-sm-6 col-lg-4 px-2">
+                <div class="slider__item__details">
+                    <p class="discount">-15%</p>
+                    <a href="#"><img src="images/products/dg.jpg" class="product_photo" alt=""></a>
+                    <a href="#" class="product_brand">DIESEL</a>
+                    <a href="#" class="product_description">Preselect your duty free goods online and buy them with a discount during your flight with all possible comfort</a>
+                    <a href="#" class="product_price double-price">
+                        <span>62.00€</span>
+                        <span class="old-price">70.00€</span>
+                    </a>
+                    <div class="action_buttons">
+                        <button class="add_to_cart">Add to cart</button>
+                        <p class="add_to_favourites"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4 px-2">
+                <div class="slider__item__details">
+                    <p class="discount">-15%</p>
+                    <a href="#"><img src="images/products/badger.jpg" class="product_photo" alt=""></a>
+                    <a href="#" class="product_brand">DIESEL</a>
+                    <a href="#" class="product_description">Preselect your duty free goods online and buy them with a discount during your flight with all possible comfort</a>
+                    <a href="#" class="product_price double-price">
+                        <span>62.00€</span>
+                        <span class="old-price">70.00€</span>
+                    </a>
+                    <div class="action_buttons">
+                        <button class="add_to_cart">Add to cart</button>
+                        <p class="add_to_favourites"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4 px-2">
+                <div class="slider__item__details">
+                    <p class="discount">-15%</p>
+                    <a href="#"><img src="images/products/jameson.jpg" class="product_photo" alt=""></a>
+                    <a href="#" class="product_brand">DIESEL</a>
+                    <a href="#" class="product_description">Preselect your duty free goods online and buy them with a discount during your flight with all possible comfort</a>
+                    <a href="#" class="product_price double-price">
+                        <span>62.00€</span>
+                        <span class="old-price">70.00€</span>
+                    </a>
+                    <div class="action_buttons">
+                        <button class="add_to_cart">Add to cart</button>
+                        <p class="add_to_favourites"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4 px-2">
+                <div class="slider__item__details">
+                    <p class="discount">-15%</p>
+                    <a href="#"><img src="images/products/smorod.png" class="product_photo" alt=""></a>
+                    <a href="#" class="product_brand">DIESEL</a>
+                    <a href="#" class="product_description">Preselect your duty free goods online and buy them with a discount during your flight with all possible comfort</a>
+                    <a href="#" class="product_price double-price">
+                        <span>62.00€</span>
+                        <span class="old-price">70.00€</span>
+                    </a>
+                    <div class="action_buttons">
+                        <button class="add_to_cart">Add to cart</button>
+                        <p class="add_to_favourites"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4 px-2">
+                <div class="slider__item__details">
+                    <p class="discount">-15%</p>
+                    <a href="#"><img src="images/products/nalivka-cherry.jpg" class="product_photo" alt=""></a>
+                    <a href="#" class="product_brand">DIESEL</a>
+                    <a href="#" class="product_description">Preselect your duty free goods online and buy them with a discount during your flight with all possible comfort</a>
+                    <a href="#" class="product_price double-price">
+                        <span>62.00€</span>
+                        <span class="old-price">70.00€</span>
+                    </a>
+                    <div class="action_buttons">
+                        <button class="add_to_cart">Add to cart</button>
+                        <p class="add_to_favourites"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4 px-2">
+                <div class="slider__item__details">
+                    <p class="discount">-15%</p>
+                    <a href="#"><img src="images/products/dg.jpg" class="product_photo" alt=""></a>
+                    <a href="#" class="product_brand">DIESEL</a>
+                    <a href="#" class="product_description">Preselect your duty free goods online and buy them with a discount during your flight with all possible comfort</a>
+                    <a href="#" class="product_price double-price">
+                        <span>62.00€</span>
+                        <span class="old-price">70.00€</span>
+                    </a>
+                    <div class="action_buttons">
+                        <button class="add_to_cart">Add to cart</button>
+                        <p class="add_to_favourites"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4 px-2">
+                <div class="slider__item__details">
+                    <p class="discount">-15%</p>
+                    <a href="#"><img src="images/products/dg.jpg" class="product_photo" alt=""></a>
+                    <a href="#" class="product_brand">DIESEL</a>
+                    <a href="#" class="product_description">Preselect your duty free goods online and buy them with a discount during your flight with all possible comfort</a>
+                    <a href="#" class="product_price double-price">
+                        <span>62.00€</span>
+                        <span class="old-price">70.00€</span>
+                    </a>
+                    <div class="action_buttons">
+                        <button class="add_to_cart">Add to cart</button>
+                        <p class="add_to_favourites"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4 px-2">
+                <div class="slider__item__details">
+                    <p class="discount">-15%</p>
+                    <a href="#"><img src="images/products/badger.jpg" class="product_photo" alt=""></a>
+                    <a href="#" class="product_brand">DIESEL</a>
+                    <a href="#" class="product_description">Preselect your duty free goods online and buy them with a discount during your flight with all possible comfort</a>
+                    <a href="#" class="product_price double-price">
+                        <span>62.00€</span>
+                        <span class="old-price">70.00€</span>
+                    </a>
+                    <div class="action_buttons">
+                        <button class="add_to_cart">Add to cart</button>
+                        <p class="add_to_favourites"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 col-lg-4 px-2">
+                <div class="slider__item__details">
+                    <p class="discount">-15%</p>
+                    <a href="#"><img src="images/products/jameson.jpg" class="product_photo" alt=""></a>
+                    <a href="#" class="product_brand">DIESEL</a>
+                    <a href="#" class="product_description">Preselect your duty free goods online and buy them with a discount during your flight with all possible comfort</a>
+                    <a href="#" class="product_price double-price">
+                        <span>62.00€</span>
+                        <span class="old-price">70.00€</span>
+                    </a>
+                    <div class="action_buttons">
+                        <button class="add_to_cart">Add to cart</button>
+                        <p class="add_to_favourites"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <ul class="pagination justify-content-end">
+        <li class="page-item"><a class="page-link" href="javascript:void(0);">Previous</a></li>
+        <li class="page-item active"><a class="page-link" href="javascript:void(0);">1</a></li>
+        <li class="page-item"><a class="page-link" href="javascript:void(0);">2</a></li>
+        <li class="page-item"><a class="page-link" href="javascript:void(0);">Next</a></li>
+    </ul>
+</main>
+<footer>
+    <div class="footer_main_part">
+        <div class="footer_logo_block">
+            <img src="images/logos/DF_logo_white.svg" alt="Smart Duty Free logo">
+        </div>
+        <div class="footer_main_content">
+            <div class="footer_shop_block">
+                <div class="footer_block_name">Shop</div>
+                <div class="footer_block_list">
+                    <a href="#">Wine & Spirits</a>
+                    <a href="#">Fragrances</a>
+                    <a href="#">Makeup</a>
+                    <a href="#">Sweets</a>
+                    <a href="#">For children</a>
+                    <a href="#">Accessories</a>
+                    <a href="#">Skin Care</a>
+                    <a href="#">Electronics</a>
+                    <a href="#">Clothes</a>
+                    <a href="#">Cigarettes</a>
+                </div>
+            </div>
+            <div class="footer_company_block">
+                <div class="footer_block_name">Company</div>
+                <div class="footer_block_list">
+                    <a href="#">About Us</a>
+                    <a href="#">Careers</a>
+                    <a href="#">Contact us</a>
+                    <a href="#">Cookie Policy</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms and Conditions</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer_contact_block">
+            <p>Sign up for newsletters</p>
+            <p>Be in the know for new arrivals & exclusive sales.</p>
+            <form action="#">
+                <input type="email" class="enter_email_field" placeholder="Enter your email">
+                <button type="submit" class="sign_up_btn">Sign up</button>
+            </form>
+        </div>
+    </div>
+    <div class="footer_copyright">
+        <hr>
+        <span>© Smart Duty Free</span>
+    </div>
+</footer>
+<script src="extensions/jquery/jquery-3.4.1.min.js"></script>
+<script src="extensions/bootstrap/js/bootstrap.min.js"></script>
+<script src="js/action.js"></script>
+<script src="js/products_list_by_category.js"></script>
+<script>
+    window.onload = function() {
+        toggleToFavouritesBtn();
+        prolongSearchBar();
+        setFilterRanges();
+        fillQuantities();
+        // toggleFilters();
+        searchList();
+    };
+</script>
+</body>
+</html>
